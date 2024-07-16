@@ -7,14 +7,20 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('partner', '0007_alter_stockrecord_partner'),
+        ("partner", "0007_alter_stockrecord_partner"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='stockrecord',
-            name='partner',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='stockrecords', to='partner.partner', verbose_name='Partner'),
+            model_name="stockrecord",
+            name="partner",
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="stockrecords",
+                to="partner.partner",
+                verbose_name="Partner",
+            ),
             preserve_default=False,
         ),
     ]

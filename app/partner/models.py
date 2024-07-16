@@ -15,15 +15,16 @@ class AbstractStockRecord(CoreAbstractStockRecord):
         related_name="custom_stockrecords",
         related_query_name="custom_stockrecord",
         null=True,
-        blank=True
+        blank=True,
     )
     product = models.ForeignKey(
-        'catalogue.Product',
+        "catalogue.Product",
         on_delete=models.CASCADE,
-        related_name='custom_stockrecords',
-        related_query_name='custom_stockrecord',
-        verbose_name=_('Product')
+        related_name="custom_stockrecords",
+        related_query_name="custom_stockrecord",
+        verbose_name=_("Product"),
     )
+
     class Meta:
         abstract = False
 
