@@ -435,4 +435,10 @@ jQuery(document).ready(function($)
     		}
     	}
     }
+
+	// hide and show search 
+
+	$("#search-btn").click(function(){
+		$("#nav-search").slideToggle();
+	});
 });
